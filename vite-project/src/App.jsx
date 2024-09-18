@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { Card } from "./componentes/card/index.jsx";
+import { Card_conChildren } from "./componentes/card_conChildren/index.jsx";
+import { CardContent } from "./componentes/card_content/index.jsx";
+import { Form } from "./componentes/form/index.jsx";
+import { Contador } from "./componentes/contador/index.jsx";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1> TAs UT5 Desarrollo Web </h1>
+      <div class="elemento">
+        <h3> TA1</h3>
+        <Card
+          titulo="Titulo1"
+          descripcion="hola"
+          persona="persona"
+          fechaInicio="lunes"
+          fechaFin="martes"
+        />
+        <Card
+          titulo="Titulo2"
+          descripcion="hola"
+          persona="persona"
+          fechaInicio="lunes"
+          fechaFin="martes"
+        />
+        <Card
+          titulo="Titulo3"
+          descripcion="hola"
+          persona="persona"
+          fechaInicio="lunes"
+          fechaFin="martes"
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div class="elemento">
+        <h3>TA2</h3>
+        <Card_conChildren>
+          <CardContent
+            titulo="Titulo 2"
+            descripcion="..."
+            persona="otra persona"
+            fechaInicio="una fecha"
+            fechaFin="otra fecha"
+          />
+        </Card_conChildren>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div class="elemento">
+        <h3> TA3</h3>
+        <div className="card">
+          <Form />
+        </div>
+      </div>
+
+      <div class="elemento">
+        <h3> TA4</h3>
+        <div className="card">
+          <Contador> </Contador>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
