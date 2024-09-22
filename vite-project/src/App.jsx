@@ -5,6 +5,8 @@ import { CardContent } from "./componentes/card_content/index.jsx";
 import { Form } from "./componentes/form/index.jsx";
 import { Contador } from "./componentes/contador/index.jsx";
 import "./App.css";
+import { TextoDesaparece } from "./componentes/textoMuestraEsconde/index.jsx";
+import { TaskList } from "./componentes/listaDeTareas/index.jsx";
 
 function App() {
   return (
@@ -58,6 +60,20 @@ function App() {
         <h3> TA4</h3>
         <div className="card">
           <Contador> </Contador>
+        </div>
+      </div>
+
+      <div class="elemento">
+        <h3> TA5</h3>
+        <div className="card">
+          <TextoDesaparece />
+        </div>
+      </div>
+
+      <div class="elemento">
+        <h3> TA5</h3>
+        <div className="card">
+          <TaskList />
         </div>
       </div>
     </>
